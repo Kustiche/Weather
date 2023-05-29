@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="style.css">
+  <title>Weather</title>
+</head>
+<body>
+  <section class="weather">
+    <div class="weather__container container">
+      <div class="weather__wrap">
+        <div class="weather__top">
+          <div class="weather__top-left">
+            <form class="form" action="#/">
+              <input class="form__search" type="text" placeholder="Search">
+              <button class="form__btn btn-reset">
+                <svg class="form__svg-search">
+                <use href="img/sprite.svg#search"></use>
+                </svg>
+              </button>
+            </form>
+            <div class="weather__information">
+              <div class="weather__information-top">
+                <div class="weather__city">
+                  <span class="weather__excerpt">Weather in</span>
+                  <output class="weather__city-output">
+                    Barnaul
+                    <button class="weather__city-btn btn-reset">
+                      <svg class="weather__city-heart">
+                      <use href="img/sprite.svg#heart"></use>
+                      </svg>
+                    </button>
+                  </output>
+                </div>
+                <div class="weather__forecast">
+                  <img class="weather__forecast-img" src="img/clouds.svg" alt="Clouds">
+                  <span class="weather__excerpt weather__excerpt--dont-push">Clouds</span>
+                </div>
+              </div>
+              <div class="weather__degrees">
+                <div class="weather__degrees-now">
+                  <span class="weather__degree-excerpt">20</span>
+                  <span class="weather__descr">Weather now</span>
+                </div>
+                <div class="weather__degrees-felt">
+                  <span class="weather__degree-excerpt">18</span>
+                  <span class="weather__descr">Feels like</span>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="weather__top-right">
+            <h2 class="weather__title">Details</h2>
+            <div class="weather__details-information">
+              <div class="weather__details-information-top">
+                <div class="weather__detail">
+                  <svg class="weather__svg">
+                  <use href="img/sprite.svg#wind"></use>
+                  </svg>
+                  <div class="weather__inner">
+                    <span class="weather__detail-descr">11km/h</span>
+                    <span class="weather__descr weather__descr--detail">Wind speed</span>
+                  </div>
+                </div>
+                <div class="weather__detail">
+                  <svg class="weather__svg weather__svg--humidity">
+                  <use href="img/sprite.svg#humidity"></use>
+                  </svg>
+                  <div class="weather__inner">
+                    <span class="weather__detail-descr">31%</span>
+                    <span class="weather__descr weather__descr--detail">Humidity</span>
+                  </div>
+                </div>
+              </div>
+              <div class="weather__details-information-bottom">
+                <div class="weather__detail">
+                  <svg class="weather__svg weather__svg--sunset">
+                  <use href="img/sprite.svg#sunset"></use>
+                  </svg>
+                  <div class="weather__inner">
+                    <span class="weather__detail-descr">18:54</span>
+                    <span class="weather__descr weather__descr--detail">Sunset</span>
+                  </div>
+                </div>
+                <div class="weather__detail">
+                  <svg class="weather__svg weather__svg--sunrise">
+                  <use href="img/sprite.svg#sunrise"></use>
+                  </svg>
+                  <div class="weather__inner">
+                    <span class="weather__detail-descr">03:21</span>
+                    <span class="weather__descr weather__descr--detail">Sunrise</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="weather__bottom">
+          <div class="weather__bottom-left"></div>
+          <div class="weather__bottom-right"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <script type="module" src="js/main.js"></script>
+</body>
+</html>

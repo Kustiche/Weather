@@ -1,0 +1,296 @@
+@font-face
+  font-family: "Manrope"
+  src: url("fonts/Manrope.woff2")
+  font-weight: 700
+  font-style: normal
+  font-display: swap
+
+$mine-shaft: #222222
+$mine: #333333
+$white: #FFFFFF
+$black: #000000
+$dove-gray: #636363
+
+@import "libs/normalize"
+
+html
+  box-sizing: border-box
+  scroll-behavior: smooth
+
+*,
+*::before,
+*::after
+  box-sizing: inherit
+
+body
+  font-family: "Manrope", sans-serif
+  font-weight: 700
+  font-size: 20px
+  line-height: 27px
+  color: $black
+
+.container
+  margin: 0 auto
+  padding:0 15px
+  max-width: 1035px
+
+.btn-reset
+  padding: 0
+  background-color: transparent
+  border: none
+  cursor: pointer
+  color: inherit
+
+.link-reset
+  text-decoration: none
+  color: inherit
+
+.list-reset
+  margin: 0
+  padding: 0
+  list-style: none
+
+.weather
+  padding: 40px 0
+
+  &__container
+    display: flex
+    justify-content: center
+
+  &__wrap
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 720px
+    min-height: 450px
+    background-color: $mine-shaft
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2)
+    border-radius: 15px
+
+  &__top
+    display: flex
+    align-items: flex-start
+    width: 100%
+    min-height: 215px
+    border-radius: 15px 15px 30px 30px
+    background-color: $white
+
+  &__top-left
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 18px 25px 22px 25px
+    width: 100%
+    max-width: 362px
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      height: 100%  
+      right: 0
+      top: 0
+      border-left: 4px solid $black
+      transform: translateX(50%)
+
+  &__information 
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  &__information-top 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+    margin-bottom: 30px
+
+  &__city
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__excerpt 
+    margin-bottom: 5px
+    font-size: 13px
+    line-height: 18px
+    &--dont-push
+      margin-bottom: 0
+
+  &__city-output
+    padding: 5px 0
+    padding-left: 12px
+    width: 150px
+    color: $white
+    background-color: $mine
+    border-radius: 15px
+    position: relative
+
+  &__city-btn
+    position: absolute
+    top: 50%
+    right: 13px
+    transform: translateY(-50%)
+    line-height: 0
+    transition: transform .4s
+    &:hover
+      transform: scale(0.90) translateY(-50%)
+
+  &__city-heart
+    width: 24px
+    height: 23px
+
+  &__forecast
+    display: flex
+    flex-direction: column
+
+  &__forecast-img
+    margin-bottom: 5px
+    width: 42px
+    height: 28px
+
+  &__degrees 
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 100%
+
+  &__degrees-now
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__degree-excerpt 
+    font-size: 40px
+    line-height: 40px
+    color: $black
+    position: relative
+    &::after
+      position: absolute
+      content: ""
+      width: 8px
+      height: 8px
+      border-radius: 100% 
+      border: 2px solid $mine-shaft
+      top: 4px
+      right: 0
+      transform: translateX(100%)
+
+  &__descr 
+    font-size: 11px
+    line-height: 15px
+    &--detail
+      text-transform: uppercase
+      color: $dove-gray
+
+  &__degrees-felt
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__top-right
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 18px 30px 46px 30px
+    width: 100%
+    max-width: 362px
+
+  &__title
+    margin: 0
+    margin-bottom: 35px
+    padding: 3px 0
+    width: 100%
+    font-family: "Manrope", sans-serif
+    font-weight: 700
+    font-size: 20px
+    line-height: 27px
+    background-color: $mine
+    text-align: center
+    border-radius: 15px
+    color: $white
+
+  &__details-information
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
+
+  &__details-information-top 
+    display: flex
+    justify-content: space-between
+    align-content: start
+    width: 100%
+    margin-bottom: 15px
+
+  &__detail
+    display: flex
+    align-items: center
+
+  &__svg
+    margin-right: 8px
+    width: 42px
+    height: 31px
+
+  &__inner
+    display: flex
+    flex-direction: column
+    align-items: flex-start
+
+  &__svg--humidity 
+    width: 31px
+    height: 32px
+
+  &__details-information-bottom 
+    display: flex
+    justify-content: space-between
+    align-content: start
+    width: 100%
+
+  &__svg--sunset 
+    width: 45px
+    height: 38px
+
+  &__svg--sunrise 
+    width: 49px
+    height: 33px
+
+  &__bottom 
+
+  &__bottom-left 
+
+  &__bottom-right 
+
+.form
+  display: flex
+  align-items: center
+  position: relative
+  margin-bottom: 30px
+  width: 100%
+
+  &__search
+    all: unset
+    padding: 7px
+    padding-left: 10px
+    width: 100%
+    font-weight: 400
+    font-size: 14px
+    line-height: 17px
+    color: $mine-shaft
+    border: 1px solid $mine-shaft
+    border-radius: 15px
+    cursor: pointer
+
+  &__btn
+    position: absolute
+    top: 50%
+    right: 10px
+    transform: translateY(-50%)
+    line-height: 0
+    transition: transform .4s
+    &:hover
+      transform: scale(0.90) translateY(-50%)
+
+  &__svg-search
+    width: 18px
+    height: 18px
