@@ -25,27 +25,25 @@
               <div class="weather__information-top">
                 <div class="weather__city">
                   <span class="weather__excerpt">Weather in</span>
-                  <output class="weather__city-output">
-                    Barnaul
-                    <button class="weather__city-btn btn-reset">
-                      <svg class="weather__city-heart">
-                      <use href="img/sprite.svg#heart"></use>
-                      </svg>
-                    </button>
-                  </output>
+                  <output class="weather__city-output"></output>
+                  <button class="weather__city-btn btn-reset">
+                    <svg class="weather__city-heart">
+                    <use href="img/sprite.svg#heart"></use>
+                    </svg>
+                  </button>
                 </div>
                 <div class="weather__forecast">
                   <img class="weather__forecast-img" src="img/clouds.svg" alt="Clouds">
-                  <span class="weather__excerpt weather__excerpt--dont-push">Clouds</span>
+                  <span class="weather__excerpt weather__excerpt--dont-push forecast"></span>
                 </div>
               </div>
               <div class="weather__degrees">
                 <div class="weather__degrees-now">
-                  <span class="weather__degree-excerpt">20</span>
+                  <span class="weather__degree-excerpt weather__degree-excerpt--now"></span>
                   <span class="weather__descr">Weather now</span>
                 </div>
                 <div class="weather__degrees-felt">
-                  <span class="weather__degree-excerpt">18</span>
+                  <span class="weather__degree-excerpt weather__degree-excerpt--felt"></span>
                   <span class="weather__descr">Feels like</span>
                 </div>
               </div>
@@ -60,7 +58,7 @@
                   <use href="img/sprite.svg#wind"></use>
                   </svg>
                   <div class="weather__inner">
-                    <span class="weather__detail-descr">11km/h</span>
+                    <span class="weather__detail-descr weather__detail-descr--wind"></span>
                     <span class="weather__descr weather__descr--detail">Wind speed</span>
                   </div>
                 </div>
@@ -69,7 +67,7 @@
                   <use href="img/sprite.svg#humidity"></use>
                   </svg>
                   <div class="weather__inner">
-                    <span class="weather__detail-descr">31%</span>
+                    <span class="weather__detail-descr weather__detail-descr--humidity"></span>
                     <span class="weather__descr weather__descr--detail">Humidity</span>
                   </div>
                 </div>
@@ -80,7 +78,7 @@
                   <use href="img/sprite.svg#sunset"></use>
                   </svg>
                   <div class="weather__inner">
-                    <span class="weather__detail-descr">18:54</span>
+                    <span class="weather__detail-descr weather__detail-descr--sunset"></span>
                     <span class="weather__descr weather__descr--detail">Sunset</span>
                   </div>
                 </div>
@@ -89,7 +87,7 @@
                   <use href="img/sprite.svg#sunrise"></use>
                   </svg>
                   <div class="weather__inner">
-                    <span class="weather__detail-descr">03:21</span>
+                    <span class="weather__detail-descr weather__detail-descr--sunrise"></span>
                     <span class="weather__descr weather__descr--detail">Sunrise</span>
                   </div>
                 </div>
@@ -98,7 +96,15 @@
           </div>
         </div>
         <div class="weather__bottom">
-          <div class="weather__bottom-left"></div>
+          <div class="weather__bottom-left">
+            <h2 class="weather__title weather__title--white">Favorites</h2>
+            <div class="weather__favorites">
+              <div class="weather__favorite">
+                <span class="weather__favorite-excerpt">Barnaul</span>
+                <button class="weather__favorite-btn btn-reset"></button>
+              </div>
+            </div>
+          </div>
           <div class="weather__bottom-right"></div>
         </div>
       </div>

@@ -1,0 +1,9 @@
+export const form = document.querySelector('.form');
+export const cityOutput = document.querySelector('.weather__city-output');
+export const forecast = document.querySelector('.forecast');
+export const degreeNow = document.querySelector('.weather__degree-excerpt--now');
+export const degreeFelt = document.querySelector('.weather__degree-excerpt--felt');
+export const detailWind = document.querySelector('.weather__detail-descr--wind');
+export const detailHumidity = document.querySelector('.weather__detail-descr--humidity');
+export const detailSunset = document.querySelector('.weather__detail-descr--sunset');
+export const detailSunrise = document.querySelector('.weather__detail-descr--sunrise');
