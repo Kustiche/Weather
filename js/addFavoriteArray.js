@@ -20,5 +20,5 @@ export function addFavoriteArray() {
     });
   }
 
-  render(cityName);
+  render();
 }

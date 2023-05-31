@@ -1,6 +1,7 @@
-import { form, cityOutput, favoriteBtn } from "./view.js";
+import { form, cityOutput, favoriteBtn, favorites } from "./view.js";
 import { weatherAPI } from "./weatherAPI.js";
 import { addFavoriteArray } from "./addFavoriteArray.js";
+import { deleteFavorite } from "./deleteFavorite.js";
 
 let cityName = '';
 
@@ -16,4 +17,8 @@ form.addEventListener('submit', (e) => {
 
 favoriteBtn.addEventListener('click', () => {
   addFavoriteArray()
+});
+
+favorites.addEventListener('click', (e) => {
+  deleteFavorite(e);
 });
