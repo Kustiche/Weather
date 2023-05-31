@@ -211,6 +211,10 @@ body
     text-align: center
     border-radius: 15px
     color: $white
+    &--white
+      margin-bottom: 30px
+      color: $mine-shaft
+      background-color: $white
 
   &__details-information
     display: flex
@@ -257,21 +261,58 @@ body
     width: 49px
     height: 33px
 
-  &__bottom 
+  &__bottom
+    display: flex
+    justify-content: space-between
+    width: 100%
 
   &__bottom-left
-
-  &__title
-
-  &__title--white
+    display: flex
+    flex-direction: column
+    align-items: center
+    padding: 18px 25px 22px 25px
+    width: 100%
+    max-width: 362px
 
   &__favorites
+    display: flex
+    flex-direction: column
+    align-items: center
+    width: 100%
 
   &__favorite
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 15px
+    width: 100%
+    &:last-child
+      margin-bottom: 0
 
   &__favorite-excerpt
+    font-size: 24px
+    line-height: 33px
+    color: $white
 
   &__favorite-btn
+    width: 20px
+    height: 20px
+    position: relative
+    &::after, &::before
+      position: absolute
+      content: ""
+      height: 20px
+      border-left: 2px solid $white
+      top: 0
+      transform: rotate(45deg)
+      transition: transform .4s
+    &::before
+      transform: rotate(-45deg)
+    &:hover
+      &::after
+        transform: rotate(45deg) scale(0.9)
+      &::before
+        transform: rotate(-45deg) scale(0.9)
 
 
   &__bottom-right 

@@ -1,5 +1,6 @@
-import { form, cityOutput } from "./view.js";
+import { form, cityOutput, favoriteBtn } from "./view.js";
 import { weatherAPI } from "./weatherAPI.js";
+import { addFavoriteArray } from "./addFavoriteArray.js";
 
 let cityName = '';
 
@@ -11,4 +12,8 @@ form.addEventListener('submit', (e) => {
   cityOutput.textContent = search.value;
 
   weatherAPI(cityName);
-})
+});
+
+favoriteBtn.addEventListener('click', () => {
+  addFavoriteArray()
+});

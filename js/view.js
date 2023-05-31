@@ -7,3 +7,6 @@ export const detailWind = document.querySelector('.weather__detail-descr--wind')
 export const detailHumidity = document.querySelector('.weather__detail-descr--humidity');
 export const detailSunset = document.querySelector('.weather__detail-descr--sunset');
 export const detailSunrise = document.querySelector('.weather__detail-descr--sunrise');
+export const favoriteBtn = document.querySelector('.weather__city-btn');
+export const template = document.querySelector('#favorite-template');
+export const favorites = document.querySelector('.weather__favorites');

@@ -526,6 +526,11 @@ body {
   border-radius: 15px;
   color: #FFFFFF;
 }
+.weather__title--white {
+  margin-bottom: 30px;
+  color: #222222;
+  background-color: #FFFFFF;
+}
 .weather__details-information {
   display: flex;
   flex-direction: column;
@@ -570,6 +575,63 @@ body {
 .weather__svg--sunrise {
   width: 49px;
   height: 33px;
+}
+.weather__bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.weather__bottom-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 18px 25px 22px 25px;
+  width: 100%;
+  max-width: 362px;
+}
+.weather__favorites {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+.weather__favorite {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+  width: 100%;
+}
+.weather__favorite:last-child {
+  margin-bottom: 0;
+}
+.weather__favorite-excerpt {
+  font-size: 24px;
+  line-height: 33px;
+  color: #FFFFFF;
+}
+.weather__favorite-btn {
+  width: 20px;
+  height: 20px;
+  position: relative;
+}
+.weather__favorite-btn::after, .weather__favorite-btn::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  border-left: 2px solid #FFFFFF;
+  top: 0;
+  transform: rotate(45deg);
+  transition: transform 0.4s;
+}
+.weather__favorite-btn::before {
+  transform: rotate(-45deg);
+}
+.weather__favorite-btn:hover::after {
+  transform: rotate(45deg) scale(0.9);
+}
+.weather__favorite-btn:hover::before {
+  transform: rotate(-45deg) scale(0.9);
 }
 .form {
   display: flex;
