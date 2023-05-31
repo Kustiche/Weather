@@ -9,7 +9,6 @@ export function weatherAPI(cityName) {
   fetch(url)
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
       const {main: {...mainInformation}, sys: {...sysInformation}, weather: [{main}], wind: {speed}} = data;
       const timeSunrise = new Date(sysInformation.sunrise * 1000);
       const timeSunset = new Date(sysInformation.sunset * 1000);
@@ -49,4 +48,5 @@ export function weatherAPI(cityName) {
       detailSunrise.textContent = timeSunriseHourse + ':' + timeSunriseMinutes;
       detailWind.textContent = speed + 'km/h';
     })
+    .catch(() => alert('City not found'))
 };
