@@ -2,6 +2,7 @@ import { form, cityOutput, favoriteBtn, favorites } from "./view.js";
 import { weatherAPI } from "./weatherAPI.js";
 import { addFavoriteArray } from "./addFavoriteArray.js";
 import { deleteFavorite } from "./deleteFavorite.js";
+import { cityForecast } from "./cityForecast.js";
 
 let cityName = '';
 
@@ -20,5 +21,6 @@ favoriteBtn.addEventListener('click', () => {
 });
 
 favorites.addEventListener('click', (e) => {
+  cityForecast(e);
   deleteFavorite(e);
 });
