@@ -1,1 +1,1 @@
-export const favoriteArray = [];
+export let favoriteArray = JSON.parse(localStorage.getItem('weather'));

@@ -21,4 +21,5 @@ export function addFavoriteArray() {
   }
 
   render();
+  localStorage.setItem('weather', JSON.stringify(favoriteArray));
 }

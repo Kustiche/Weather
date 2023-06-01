@@ -3,14 +3,25 @@ import { weatherAPI } from "./weatherAPI.js";
 import { addFavoriteArray } from "./addFavoriteArray.js";
 import { deleteFavorite } from "./deleteFavorite.js";
 import { cityForecast } from "./cityForecast.js";
+import { render } from "./render.js";
+import { localCityForecast } from "./localCityForecat.js";
+import { favoriteArray } from "./favoriteArray.js";
 
 let cityName = '';
+
+if (cityOutput.textContent === '') {
+  cityOutput.textContent = JSON.parse(localStorage.getItem('cityName'));
+  localCityForecast(cityOutput.textContent);
+};
+render();
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
   const search = document.querySelector('.form__search');
 
   cityName = search.value;
+  localStorage.setItem('cityName', JSON.stringify(cityName));
+
   cityOutput.textContent = search.value;
 
   weatherAPI(cityName);
@@ -22,5 +33,7 @@ favoriteBtn.addEventListener('click', () => {
 
 favorites.addEventListener('click', (e) => {
   cityForecast(e);
+  localStorage.setItem('cityName', JSON.stringify(cityOutput.textContent));
   deleteFavorite(e);
+  localStorage.setItem('weather', JSON.stringify(favoriteArray));
 });
