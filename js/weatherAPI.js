@@ -1,4 +1,4 @@
-import { forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind, cityOutput } from "./view.js";
+import { forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind, cityOutput, search } from "./view.js";
 
 const serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
 const apiKey = '44c1a218aa3a304cad0f0d8be43fa9fb';
@@ -51,5 +51,6 @@ export function weatherAPI(cityName) {
     .catch(() => {
       window.modalError.showModal();
       cityOutput.textContent = '';
+      search.value = '';
     })
 };

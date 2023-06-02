@@ -10,3 +10,4 @@ export const detailSunrise = document.querySelector('.weather__detail-descr--sun
 export const favoriteBtn = document.querySelector('.weather__city-btn');
 export const template = document.querySelector('#favorite-template');
 export const favorites = document.querySelector('.weather__favorites');
+export const search = document.querySelector('.form__search');

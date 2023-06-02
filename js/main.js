@@ -1,4 +1,4 @@
-import { form, cityOutput, favoriteBtn, favorites } from "./view.js";
+import { form, cityOutput, favoriteBtn, favorites, search } from "./view.js";
 import { weatherAPI } from "./weatherAPI.js";
 import { addFavoriteArray } from "./addFavoriteArray.js";
 import { deleteFavorite } from "./deleteFavorite.js";
@@ -17,7 +17,6 @@ render();
 
 form.addEventListener('submit', (e) => {
   e.preventDefault();
-  const search = document.querySelector('.form__search');
 
   cityName = search.value;
   localStorage.setItem('cityName', JSON.stringify(cityName));
