@@ -666,4 +666,39 @@ body {
 .form__svg-search {
   width: 18px;
   height: 18px;
+}
+
+.modal-error {
+  padding: 40px 20px;
+  position: relative;
+}
+.modal-error__close {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: 10px;
+  right: 0;
+  transform: translateX(-50%);
+}
+.modal-error__close::after, .modal-error__close::before {
+  position: absolute;
+  content: "";
+  height: 20px;
+  border-left: 2px solid #222222;
+  top: 0;
+  transform: rotate(45deg);
+  transition: transform 0.4s;
+}
+.modal-error__close::before {
+  transform: rotate(-45deg);
+}
+.modal-error__close:hover::after {
+  transform: rotate(45deg) scale(0.9);
+}
+.modal-error__close:hover::before {
+  transform: rotate(-45deg) scale(0.9);
+}
+.modal-error__descr {
+  font-size: 24px;
+  line-height: 33px;
 }/*# sourceMappingURL=style.css.map */

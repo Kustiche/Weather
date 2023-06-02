@@ -349,3 +349,34 @@ body
   &__svg-search
     width: 18px
     height: 18px
+
+.modal-error
+  padding: 40px 20px
+  position: relative
+
+  &__close
+    width: 20px
+    height: 20px
+    position: absolute
+    top: 10px
+    right: 0
+    transform: translateX(-50%)
+    &::after, &::before
+      position: absolute
+      content: ""
+      height: 20px
+      border-left: 2px solid $mine-shaft
+      top: 0
+      transform: rotate(45deg)
+      transition: transform .4s
+    &::before
+      transform: rotate(-45deg)
+    &:hover
+      &::after
+        transform: rotate(45deg) scale(0.9)
+      &::before
+        transform: rotate(-45deg) scale(0.9)
+
+  &__descr
+    font-size: 24px
+    line-height: 33px
