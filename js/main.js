@@ -13,6 +13,7 @@ if (cityOutput.textContent === '') {
   cityOutput.textContent = JSON.parse(localStorage.getItem('cityName'));
   localCityForecast(cityOutput.textContent);
 };
+
 render();
 
 form.addEventListener('submit', (e) => {

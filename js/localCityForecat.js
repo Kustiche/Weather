@@ -3,6 +3,7 @@ import { favoriteArray } from "./favoriteArray.js";
 
 export function localCityForecast(city) {
   const cityArray = favoriteArray.find((favorite) => favorite.name === city);
+
   if (cityArray === undefined) {
     cityOutput.textContent = '';
   }else {
