@@ -8,8 +8,9 @@ import { localCityForecast } from "./localCityForecat.js";
 import { favoriteArray } from "./favoriteArray.js";
 
 let cityName = '';
+const isEmptyOutput = cityOutput.textContent === '';
 
-if (cityOutput.textContent === '') {
+if (isEmptyOutput) {
   cityOutput.textContent = JSON.parse(localStorage.getItem('cityName'));
   localCityForecast(cityOutput.textContent);
 };

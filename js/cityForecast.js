@@ -2,7 +2,9 @@ import { cityOutput, forecast, degreeNow, degreeFelt, detailHumidity, detailSunr
 import { favoriteArray } from "./favoriteArray.js";
 
 export function cityForecast(e) {
-  if (e.target.className === 'weather__favorite-excerpt btn-reset') {
+  const isDesiredFavoriteBtn = e.target.className === 'weather__favorite-excerpt btn-reset';
+
+  if (isDesiredFavoriteBtn) {
     const name = e.target.textContent;
     const cityArray = favoriteArray.find((favorite) => favorite.name === name);
 

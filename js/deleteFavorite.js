@@ -3,7 +3,9 @@ import { render } from "./render.js";
 
 
 export function deleteFavorite(e) {
-  if (e.target.className === 'weather__favorite-btn btn-reset') {
+  const isDesiredBtn = e.target.className === 'weather__favorite-btn btn-reset';
+
+  if (isDesiredBtn) {
     const favorite = e.target.closest('.weather__favorite');
     const cityName = favorite.querySelector('.weather__favorite-excerpt');
 
