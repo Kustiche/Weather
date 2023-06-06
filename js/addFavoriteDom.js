@@ -1,7 +1,7 @@
-import { favorites, template } from "./view.js";
+import { favorites, favoriteTemplate } from "./view.js";
 
 export function addFavoriteDom(cityName) {
-  const item = template.content.cloneNode(true);
+  const item = favoriteTemplate.content.cloneNode(true);
 
   if (cityName === '') {
     return;

@@ -1,5 +1,6 @@
 import { cityOutput, forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind } from "./view.js";
 import { favoriteArray } from "./favoriteArray.js";
+import { forecastAPI } from "./weatherAPI.js";
 
 export function cityForecast(e) {
   const isDesiredFavoriteBtn = e.target.className === 'weather__favorite-excerpt btn-reset';
@@ -18,5 +19,7 @@ export function cityForecast(e) {
     detailSunrise.textContent = cityDetailSunrise;
     detailSunset.textContent = cityDetailSunset;
     detailWind.textContent = cityDetailWind;
+
+    forecastAPI(name);
   };
 };

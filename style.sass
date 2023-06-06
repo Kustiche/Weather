@@ -334,14 +334,25 @@ body
         border-left: 4px solid $white
         transform: translateX(-50%)
 
+  &__forecasts
+    display: flex
+    flex-direction: column
+    align-items: center
+    overflow-y: scroll
+    width: 100%
+    max-height: 120px
+
   &__forecast-inner
     display: flex
     flex-direction: column
     align-items: center
+    margin-bottom: 10px
     padding: 10px 10px
     width: 100%
     background-color: $white
     border-radius: 15px
+    &:last-child
+      margin-bottom: 0
 
   &__forecast-inner-top 
     display: flex

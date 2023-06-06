@@ -1,5 +1,5 @@
 import { form, cityOutput, favoriteBtn, favorites, search } from "./view.js";
-import { weatherAPI } from "./weatherAPI.js";
+import { forecastAPI, weatherAPI } from "./weatherAPI.js";
 import { addFavoriteArray } from "./addFavoriteArray.js";
 import { deleteFavorite } from "./deleteFavorite.js";
 import { cityForecast } from "./cityForecast.js";
@@ -13,6 +13,7 @@ const isEmptyOutput = cityOutput.textContent === '';
 if (isEmptyOutput) {
   cityOutput.textContent = JSON.parse(localStorage.getItem('cityName'));
   localCityForecast(cityOutput.textContent);
+  forecastAPI(cityOutput.textContent);
 };
 
 render();
@@ -26,6 +27,7 @@ form.addEventListener('submit', (e) => {
   cityOutput.textContent = search.value;
 
   weatherAPI(cityName);
+  forecastAPI(cityName);
 });
 
 favoriteBtn.addEventListener('click', () => {

@@ -1,10 +1,14 @@
 import { forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind, cityOutput, search } from "./view.js";
+import { cleaningForecastArray, forecastArray } from "./forecastArray.js";
+import { createForecastElements } from "./createForecastElements.js";
 
-const serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
+let serverUrl = '';
+let url = '';
 const apiKey = '44c1a218aa3a304cad0f0d8be43fa9fb';
 
 export function weatherAPI(cityName) {
-  const url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
+  serverUrl = 'http://api.openweathermap.org/data/2.5/weather';
+  url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
 
   fetch(url)
     .then((response) => response.json())
@@ -54,3 +58,23 @@ export function weatherAPI(cityName) {
       search.value = '';
     })
 };
+
+export function forecastAPI(cityName) {
+  serverUrl = 'http://api.openweathermap.org/data/2.5/forecast';
+  url = `${serverUrl}?q=${cityName}&appid=${apiKey}`;
+
+  fetch(url)
+    .then((response) => response.json())
+    .then((data) => {
+      cleaningForecastArray();
+
+      const {list: [...information]} = data;
+
+      for (let index = 0; index < 8; index++) {
+        forecastArray.push(information[index]);
+      };
+
+      createForecastElements(cityName);
+    })
+
+}

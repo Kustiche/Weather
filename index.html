@@ -99,41 +99,44 @@
           <div class="weather__bottom-left">
             <h2 class="weather__title weather__title--white">Favorites</h2>
             <div class="weather__favorites">
-              <template id="favorite-template">
-                <div class="weather__favorite">
-                  <button class="weather__favorite-excerpt btn-reset"></button>
-                  <button class="weather__favorite-btn btn-reset"></button>
-                </div>
-              </template>
             </div>
           </div>
           <div class="weather__bottom-right">
             <h2 class="weather__title weather__title--white">Forecast</h2>
-            <div class="weather__forecast-inner">
-              <div class="weather__forecast-inner-top">
-              <span class="weather__date">25 May</span>
-              <span class="weather__time">12:00</span>
-              </div>
-              <div class="weather__forecast-inner-bottom">
-                <div class="weather__forecast-temperatures">
-                  <span class="weather__temperature">Temperature: 13</span>
-                  <span class="weather__temperature weather__temperature--feels-like">Feels like: 8</span>
-                </div>
-                <div class="weather__forecast">
-                  <img class="weather__forecast-img weather__forecast-img--next-day" src="img/rain.svg" alt="Rain">
-                  <span class="weather__excerpt weather__excerpt--dont-push forecast">Rain</span>
-                </div>
-              </div>
-            </div>
+            <div class="weather__forecasts"></div>
           </div>
         </div>
       </div>
     </div>
   </section>
+  <script type="module" src="js/main.js"></script>
   <dialog class="modal-error" id="modalError">
     <button class="modal-error__close btn-reset" onclick="window.modalError.close();"></button>
     <span class="modal-error__descr">Вы ввели некорректный город</span>
   </dialog>
-  <script type="module" src="js/main.js"></script>
+  <template id="favorite-template">
+    <div class="weather__favorite">
+      <button class="weather__favorite-excerpt btn-reset"></button>
+      <button class="weather__favorite-btn btn-reset"></button>
+    </div>
+  </template>
+  <template id="forecast-template">
+    <div class="weather__forecast-inner">
+      <div class="weather__forecast-inner-top">
+      <span class="weather__date">25 May</span>
+      <span class="weather__time">12:00</span>
+      </div>
+      <div class="weather__forecast-inner-bottom">
+        <div class="weather__forecast-temperatures">
+          <span class="weather__temperature">Temperature: 13</span>
+          <span class="weather__temperature weather__temperature--feels-like">Feels like: 8</span>
+        </div>
+        <div class="weather__forecast">
+          <img class="weather__forecast-img weather__forecast-img--next-day" src="img/rain.svg" alt="Rain">
+          <span class="weather__excerpt weather__excerpt--dont-push forecast-next-day">Rain</span>
+        </div>
+      </div>
+    </div>
+  </template>
 </body>
 </html>
