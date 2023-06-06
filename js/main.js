@@ -4,7 +4,7 @@ import { addFavoriteArray } from "./addFavoriteArray.js";
 import { deleteFavorite } from "./deleteFavorite.js";
 import { cityForecast } from "./cityForecast.js";
 import { render } from "./render.js";
-import { localCityForecast } from "./localCityForecat.js";
+import { localCityForecast } from "./localCityForecast.js";
 import { favoriteArray } from "./favoriteArray.js";
 
 let cityName = '';

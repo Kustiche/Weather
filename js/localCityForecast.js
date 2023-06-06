@@ -1,12 +1,13 @@
 import { cityOutput, forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind } from "./view.js";
 import { favoriteArray } from "./favoriteArray.js";
-import { forecastAPI } from "./weatherAPI.js";
+import { forecastAPI, weatherAPI } from "./weatherAPI.js";
 
 export function localCityForecast(city) {
   const cityArray = favoriteArray.find((favorite) => favorite.name === city);
 
   if (cityArray === undefined) {
-    cityOutput.textContent = '';
+    weatherAPI(city);
+    forecastAPI(city);
   }else {
     const {name: cityName, forecast: cityForecast, detailWind: cityDetailWind, detailSunset: cityDetailSunset, detailSunrise: cityDetailSunrise, detailHumidity: cityDetailHumidity, degreeNow: cityDegreeNow, degreeFelt: cityDegreeFelt } = cityArray;
 
