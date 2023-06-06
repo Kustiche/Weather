@@ -6,8 +6,10 @@ export function localCityForecast(city) {
   const cityArray = favoriteArray.find((favorite) => favorite.name === city);
 
   if (cityArray === undefined) {
-    weatherAPI(city);
-    forecastAPI(city);
+    if (city !== '') {
+      weatherAPI(city);
+      forecastAPI(city);
+    }
   }else {
     const {name: cityName, forecast: cityForecast, detailWind: cityDetailWind, detailSunset: cityDetailSunset, detailSunrise: cityDetailSunrise, detailHumidity: cityDetailHumidity, degreeNow: cityDegreeNow, degreeFelt: cityDegreeFelt } = cityArray;
 
