@@ -13,7 +13,6 @@ const isEmptyOutput = cityOutput.textContent === '';
 if (isEmptyOutput) {
   cityOutput.textContent = JSON.parse(localStorage.getItem('cityName'));
   localCityForecast(cityOutput.textContent);
-  forecastAPI(cityOutput.textContent);
 };
 
 render();

@@ -1,5 +1,6 @@
 import { cityOutput, forecast, degreeNow, degreeFelt, detailHumidity, detailSunrise, detailSunset, detailWind } from "./view.js";
 import { favoriteArray } from "./favoriteArray.js";
+import { forecastAPI } from "./weatherAPI.js";
 
 export function localCityForecast(city) {
   const cityArray = favoriteArray.find((favorite) => favorite.name === city);
@@ -17,5 +18,7 @@ export function localCityForecast(city) {
     detailSunrise.textContent = cityDetailSunrise;
     detailSunset.textContent = cityDetailSunset;
     detailWind.textContent = cityDetailWind;
+
+    forecastAPI(cityName)
   };
 };
